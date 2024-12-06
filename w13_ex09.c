@@ -10,7 +10,7 @@ int main(void)
 
 	p = t;
 
-	q[3] = 'a¡®;
+	q[3] = 'a';
 	
 	//q = t;
 
