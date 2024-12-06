@@ -1,7 +1,7 @@
-// ÇÔ¼ö Æ÷ÀÎÅÍ ¹è¿­
+// í•¨ìˆ˜ í¬ì¸í„° ë°°ì—´
 #include <stdio.h>
 
-// ÇÔ¼ö ¿øÇü Á¤ÀÇ
+// í•¨ìˆ˜ ì›í˜• ì •ì˜
 void menu(void);
 int add(int x, int y);
 int sub(int x, int y);
@@ -11,32 +11,32 @@ int div(int x, int y);
 void menu(void)
 {
 	printf("=====================\n");
-	printf("0. µ¡¼À\n");
-	printf("1. »¬¼À\n");
-	printf("2. °ö¼À\n");
-	printf("3. ³ª´°¼À\n");
-	printf("4. Á¾·á\n");
+	printf("0. ë§ì…ˆ\n");
+	printf("1. ëº„ì…ˆ\n");
+	printf("2. ê³±ì…ˆ\n");
+	printf("3. ë‚˜ëˆ—ì…ˆ\n");
+	printf("4. ì¢…ë£Œ\n");
 	printf("=====================\n");
 }
 int main(void)
 {
 	int choice, result, x, y;
-	// ÇÔ¼ö Æ÷ÀÎÅÍ ¹è¿­À» ¼±¾ğÇÏ°í ÃÊ±âÈ­ÇÑ´Ù.
+	// í•¨ìˆ˜ í¬ì¸í„° ë°°ì—´ì„ ì„ ì–¸í•˜ê³  ì´ˆê¸°í™”í•œë‹¤.
 	int (*pf[4])(int, int) = { add, sub, mul, div };
 
 	while (1)
 	{
 		menu();
-		printf("¸Ş´º¸¦ ¼±ÅÃÇÏ½Ã¿À:");
-		scanf("%d", &choice);
+		printf("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì‹œì˜¤:");
+		scanf_s("%d", &choice);
 
 		if (choice < 0 || choice >= 4)
 			break;
-		printf("2°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
-		scanf("%d %d", &x, &y);
+		printf("2ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
+		scanf_s("%d %d", &x, &y);
 
-		result = pf[choice](x, y);	// ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ ÀÌ¿ëÇÑ ÇÔ¼ö È£Ãâ
-		printf("¿¬»ê °á°ú = %d\n", result);
+		result = pf[choice](x, y);	// í•¨ìˆ˜ í¬ì¸í„°ë¥¼ ì´ìš©í•œ í•¨ìˆ˜ í˜¸ì¶œ
+		printf("ì—°ì‚° ê²°ê³¼ = %d\n", result);
 	}
 	return 0;
 }
